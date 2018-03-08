@@ -348,6 +348,7 @@ class Punish:
             perms.add_reactions = False
         elif channel.type == discord.ChannelType.voice:
             perms.speak = False
+            perms.use_voice_activation = False
 
         await self.bot.edit_channel_permissions(channel, role, overwrite=perms)
 
